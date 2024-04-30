@@ -1,0 +1,246 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Frame.master.cs" Inherits="despacho.Frame" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arise Admin Panel" />
+    <meta name="keywords" content="Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Themeforest, Bootstrap, C3 Graphs, D3 Graphs, NVD3 Graphs, Admin Skin, Black Admin Dashboard, Grey Admin Dashboard, Dark Admin Dashboard, Simple Admin Dashboard, Simple Admin Theme, Simple Bootstrap Dashboard, " />
+    <meta name="author" content="Ramji" />
+    <link rel="shortcut icon" href="img/fav.png">
+    <title>Concretos PEPI Admin Panel</title>
+
+
+    <!-- bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- Main CSS -->
+    <link href="css/main.css" rel="stylesheet" media="screen" />
+
+    <!-- Ion Icons -->
+    <link href="fonts/icomoon/icomoon.css" rel="stylesheet" />
+
+    <!-- Pricing plans CSS -->
+    <link rel="stylesheet" href="css/pricing.css" />
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ 
+    <script src="js/jquery.js"></script>
+    
+    <!-- moment (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="Scripts/moment.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    
+
+    <!-- jquery ScrollUp JS -->
+    <script src="js/scrollup/jquery.scrollUp.js"></script>
+
+    <!-- BS Validator JS -->
+    <script src="js/bsvalidator/bootstrapValidator.js"></script>
+    <script src="js/bsvalidator/custom-validations.js"></script>
+
+    <!-- Sparkline Graphs -->
+    <script src="js/sparkline/sparkline.js"></script>
+    <script src="js/sparkline/custom-sparkline.js"></script>
+
+    <!-- Dragula Drag & Drop JS -->
+    <script src="js/dragula/dragula.min.js"></script>
+
+    <!-- Odometer JS -->
+    <script src="js/odometer/odometer.min.js"></script>
+
+    <!-- DataBars JS -->
+   <script src="js/databars/jquery.databar.js"></script>
+    <script src="js/databars/custom-databars.js"></script>
+
+    <!-- Data Tables -->
+    <script src="js/datatables/dataTables.min.js"></script>
+    <script src="js/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="js/datatables/dataTables.tableTools.js"></script>
+    <script src="js/datatables/autoFill.min.js"></script>
+    <script src="js/datatables/autoFill.bootstrap.min.js"></script>
+    <script src="js/datatables/fixedHeader.min.js"></script>
+    <script src="js/datatables/custom-datatables.js"></script>
+
+    <script src="js/AG-Grid/doublingEditor.js"></script>
+    <script src="js/AG-Grid/moodEditor.js"></script>
+    <script src="js/AG-Grid/moodRenderer.js"></script>
+    <script src="js/AG-Grid/numericEditor.js"></script>
+    <script src="js/AG-Grid/totalValueRenderer.js"></script>
+    <script src="js/AG-Grid/seleccionarRenderer.js"></script>
+    <script src="https://unpkg.com/ag-grid-enterprise@28.1.3/dist/ag-grid-enterprise.min.js">
+		</script>
+    <script src="js/AG-Grid/ag-grid.js"></script>
+
+
+    <script type="text/javascript">
+        function ShowPopup() {
+            $("#btnShowPopup").click();
+        }
+
+        function ClosePopup() {
+            $("#btnClosePopup").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupEdoSol() {
+            $("#btnShowPopupEdoSol").click();
+        }
+
+        function ClosePopupEdoSol() {
+            $("#btnClosePopupEdoSol").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupCheck() {
+            $("#btnShowPopupCheck").click();
+        }
+
+        function ClosePopupCheck() {
+            $("#btnClosePopupCheck").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupAJ() {
+            $("#btnShowPopupAJ").click();
+        }
+
+        function ClosePopupAJ() {
+            $("#btnClosePopupAJ").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupCot() {
+            $("#btnShowPopupCot").click();
+        }
+
+        function ClosePopupCot() {
+            $("#btnClosePopupCot").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupAjuste() {
+            $("#btnShowPopupAjuste").click();
+        }
+
+        function ClosePopupAjuste() {
+            $("#btnClosePopupAjuste").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupRemPDF() {
+            $("#btnShowPopupRemPDF").click();
+        }
+
+        function ClosePopupRemPDF() {
+            $("#btnClosePopupRemPDF").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupDosi() {
+            $("#btnShowPopupDosi").click();
+        }
+
+        function ClosePopupDosi() {
+            $("#btnClosePopupDosi").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupAsigU() {
+            $("#btnShowPopupAsigU").click();
+        }
+
+        function ClosePopupAsigU() {
+            $("#btnClosePopupAsigU").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupBit() {
+            $("#btnShowPopupBit").click();
+        }
+
+        function ClosePopupBit() {
+            $("#btnClosePopupBit").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupAU() {
+            $("#btnShowPopupAU").click();
+        }
+
+        function ClosePopupAU() {
+            $("#btnClosePopupAU").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function onlyDotsAndNumbers(event) {
+            var charCode = (event.which) ? event.which : event.keyCode
+            if (charCode == 46) {
+                return true;
+            }
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+
+        function onlyNumbers(event) {
+            var charCode = (event.which) ? event.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+    </script>
+    <asp:ContentPlaceHolder runat="server" ID="scripts"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+    
+        <div>
+           
+            
+           
+
+            
+
+            <!-- Dashboard Wrapper Start -->
+            <div class="dashboard-wrapper dashboard-wrapper-lg">
+                <div class="container-fluid">
+                    <form id="form1" runat="server">
+                        <asp:ScriptManager ID="ScriptManagerMaster" runat="server" EnableCdn="True" EnablePageMethods="true" EnableScriptLocalization="False"></asp:ScriptManager>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+                         </form>
+                </div>
+                
+
+            </div>
+            <!-- Dashboard Wrapper End -->
+
+           
+
+        </div>
+   
+
+
+    <!-- custom JS -->
+    <script src="js/custom.js"></script>
+</body>
+</html>

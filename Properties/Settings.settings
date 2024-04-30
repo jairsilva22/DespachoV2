@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="despacho.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="despacho_Cancelacion_CancelSOAP" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://demo-facturacion.finkok.com/servicios/soap/cancel</Value>
+    </Setting>
+    <Setting Name="despacho_Cancelacion1_CancelSOAP" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://facturacion.finkok.com/servicios/soap/cancel</Value>
+    </Setting>
+    <Setting Name="despacho_DemoCancelacion_CancelSOAP" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://demo-facturacion.finkok.com/servicios/soap/cancel</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

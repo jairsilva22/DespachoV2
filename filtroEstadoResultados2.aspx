@@ -1,0 +1,89 @@
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="filtroEstadoResultados2.aspx.cs" Inherits="despacho.filtroEstadoResultados2" MasterPageFile="~/Site.Master" AutoEventWireup="true" %>--%>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="filtroEstadoResultados2.aspx.cs" Inherits="despacho.filtroEstadoResultados2" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="scripts" runat="Server">
+    <style>
+        .selectColor {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
+
+    <asp:ScriptManagerProxy ID="ScriptManagerProxy1" runat="server"></asp:ScriptManagerProxy>
+    <div class="top-bar clearfix">
+        <div class="row gutter">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="page-title">
+                    <h3>Filtro de Estado de Resultados</h3>
+                    <p>/ <a href="home.aspx">Inicio</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar Ends -->
+    <div class="row gutter">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="panel panel-blue">
+                <p>&nbsp;</p>
+
+                <p style="text-align: center; margin-bottom: 30px">Filtro de Estado de Resultados</p>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <asp:Panel ID="Panel1" runat="server">
+                            <div class="form-group">
+                                <div class="row gutter" style="margin-bottom: 15px">
+                                    <div class="col-md-4 selectContainer">
+                                    </div>
+                                    <div class="col-md-2 selectContainer">
+                                        <label style="display: inline" class="control-label">Sucursal:</label>
+                                        <asp:DropDownList ID="ddlSucursal" runat="server" class="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlSucursal_SelectedIndexChanged"></asp:DropDownList>
+                                    </div>
+                                    <div class="col-md-4 selectContainer">
+                                        <label style="display: inline" class="control-label">Año:</label><br />
+                                        <ajaxToolkit:ComboBox ID="cbxAnio" runat="server" AutoCompleteMode="Suggest" DropDownStyle="Simple" MaxLength="4"></ajaxToolkit:ComboBox>
+                                    </div>
+                                    <div class="col-md-2 selectContainer">
+                                    </div>
+                                </div>
+                                <div class="row gutter" style="margin-bottom: 15px">
+                                    <div class="col-md-4 selectContainer">
+                                    </div>
+                                    <div class="col-md-4 selectContainer text-center">
+                                        <asp:Label ID="lblError" runat="server" Font-Size="Large" ForeColor="Red"></asp:Label>
+                                    </div>
+                                    <div class="col-md-4 selectContainer">
+                                    </div>
+                                </div>
+                                <div class="row gutter">
+                                    <div class="col-md-2 selectContainer">
+                                    </div>
+                                    <div class="col-md-4 selectContainer text-center">
+                                        <asp:Button ID="btnEnviar" runat="server" OnClick="btnEnviar_Click" Text="Enviar" />
+                                    </div>
+                                    <div class="col-md-4 selectContainer text-center">
+                                        <asp:Button ID="btnExcel" runat="server" Text="Excel" OnClick="btnExcel_Click" />
+                                    </div>
+                                    <div class="col-md-2 selectContainer">
+                                    </div>
+                                </div>
+
+                                <%--</form>--%>
+                            </div>
+                        </asp:Panel>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="ddlSucursal" EventName="SelectedIndexChanged" />
+                        <asp:AsyncPostBackTrigger ControlID="btnEnviar" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnExcel" EventName="Click" />
+                    </Triggers>
+                </asp:UpdatePanel>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+

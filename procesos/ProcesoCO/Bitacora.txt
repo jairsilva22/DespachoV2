@@ -1,0 +1,13 @@
+30-Junio-2015
+
+Cliente Volkswagen
+ids 198 y 208 ya estaban agregados,
+faltaba agregarle el nuevo que se dio de alta idcliente 223
+en esta version ya se agrego
+
+17-Septiembre-2015
+
+Cliente Volkswagen
+ids 198 y 208 ya estaban agregados,
+faltaba agregarle el nuevo que se dio de alta idcliente  227
+en esta version ya se agrego

@@ -1,0 +1,465 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="despacho.Site" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arise Admin Panel" />
+    <meta name="keywords" content="Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Themeforest, Bootstrap, C3 Graphs, D3 Graphs, NVD3 Graphs, Admin Skin, Black Admin Dashboard, Grey Admin Dashboard, Dark Admin Dashboard, Simple Admin Dashboard, Simple Admin Theme, Simple Bootstrap Dashboard, " />
+    <meta name="author" content="Ramji" />
+    <link rel="shortcut icon" href="img/fav.png">
+    <title>Concretos PEPI Admin Panel</title>
+
+    <!-- bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- Main CSS -->
+    <link href="css/main.css" rel="stylesheet" media="screen" />
+
+    <!-- Ion Icons -->
+    <link href="fonts/icomoon/icomoon.css" rel="stylesheet" />
+
+    <!-- Pricing plans CSS -->
+    <link rel="stylesheet" href="css/pricing.css" />
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ 
+    <script src="js/jquery.js"></script>
+    
+    <!-- moment (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="Scripts/moment.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- AG-GRID -->
+    <script src="js/AG-Grid/doublingEditor.js"></script>
+    <script src="js/AG-Grid/moodEditor.js"></script>
+    <script src="js/AG-Grid/moodRenderer.js"></script>
+    <script src="js/AG-Grid/numericEditor.js"></script>
+    <script src="js/AG-Grid/totalValueRenderer.js"></script>
+    <script src="js/AG-Grid/seleccionarRenderer.js"></script>
+    <script src="js/AG-Grid/seleccionarClienteRenderer.js"></script>	
+    <script src="js/AG-Grid/ag-grid.js"></script>
+    <script src="js/AG-Grid/ag-grid-enterprise.js"></script>
+    <!-- jquery ScrollUp JS -->
+    <script src="js/scrollup/jquery.scrollUp.js"></script>
+
+    <!-- BS Validator JS -->
+    <script src="js/bsvalidator/bootstrapValidator.js"></script>
+    <script src="js/bsvalidator/custom-validations.js"></script>
+
+    <!-- Sparkline Graphs -->
+    <script src="js/sparkline/sparkline.js"></script>
+    <script src="js/sparkline/custom-sparkline.js"></script>
+
+    <!-- Dragula Drag & Drop JS -->
+    <script src="js/dragula/dragula.min.js"></script>
+
+    <!-- Odometer JS -->
+    <script src="js/odometer/odometer.min.js"></script>
+
+    <!-- DataBars JS -->
+   <script src="js/databars/jquery.databar.js"></script>
+    <script src="js/databars/custom-databars.js"></script>
+
+    <!-- Data Tables -->
+    <script src="js/datatables/dataTables.min.js"></script>
+    <script src="js/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="js/datatables/dataTables.tableTools.js"></script>
+    <script src="js/datatables/autoFill.min.js"></script>
+    <script src="js/datatables/autoFill.bootstrap.min.js"></script>
+    <script src="js/datatables/fixedHeader.min.js"></script>
+    <script src="js/datatables/custom-datatables.js"></script>
+
+    <script type="text/javascript">
+        function ShowPopup() {
+            $("#btnShowPopup").click();
+        }
+
+        function ClosePopup() {
+            $("#btnClosePopup").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupEdoSol() {
+            $("#btnShowPopupEdoSol").click();
+        }
+
+        function ClosePopupEdoSol() {
+            $("#btnClosePopupEdoSol").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupCheck() {
+            $("#btnShowPopupCheck").click();
+        }
+
+        function ClosePopupCheck() {
+            $("#btnClosePopupCheck").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupAJ() {
+            $("#btnShowPopupAJ").click();
+        }
+
+        function ClosePopupAJ() {
+            $("#btnClosePopupAJ").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupCot() {
+            $("#btnShowPopupCot").click();
+        }
+
+        function ClosePopupCot() {
+            $("#btnClosePopupCot").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupAjuste() {
+            $("#btnShowPopupAjuste").click();
+        }
+
+        function ClosePopupAjuste() {
+            $("#btnClosePopupAjuste").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupRemPDF() {
+            $("#btnShowPopupRemPDF").click();
+        }
+
+        function ClosePopupRemPDF() {
+            $("#btnClosePopupRemPDF").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupDosi() {
+            $("#btnShowPopupDosi").click();
+        }
+
+        function ClosePopupDosi() {
+            $("#btnClosePopupDosi").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupAsigU() {
+            $("#btnShowPopupAsigU").click();
+        }
+
+        function ClosePopupAsigU() {
+            $("#btnClosePopupAsigU").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupBit() {
+            $("#btnShowPopupBit").click();
+        }
+
+        function ClosePopupBit() {
+            $("#btnClosePopupBit").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function ShowPopupAU() {
+            $("#btnShowPopupAU").click();
+        }
+
+        function ClosePopupAU() {
+            $("#btnClosePopupAU").click();
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        }
+
+        function onlyDotsAndNumbers(event) {
+            var charCode = (event.which) ? event.which : event.keyCode
+            if (charCode == 46) {
+                return true;
+            }
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+
+        function onlyNumbers(event) {
+            var charCode = (event.which) ? event.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+    </script>
+    <style>
+        .loader-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 1000;
+            display: none;
+        }
+
+        .loader {
+            width: 40px;
+            height: 40px;
+            border: 5px solid;
+            border-color: #ff3333 transparent;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+            position: relative;
+            top: 50%;
+            left: 50%;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <asp:ContentPlaceHolder runat="server" ID="scripts"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+    
+        <div>
+           
+            <!-- Header starts -->
+            <header>
+
+                <!-- Logo starts -->
+                <a href="home.aspx" class="logo">
+                    <img src="img/pepi_logo.png" alt="Concretos PEPI Admin Dashboard Logo" />
+                </a>
+                <!-- Logo ends -->
+
+                <!-- Header actions starts -->
+                <ul id="header-actions" class="clearfix">
+                    <%--<li class="list-box hidden-xs dropdown">
+                        <a id="drop2" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-warning2"></i>
+                        </a>
+                        <span class="info-label blue-bg">5</span>
+                        <ul class="dropdown-menu imp-notify">
+                            <li class="dropdown-header">You have 3 notifications</li>
+                            <li>
+                                <div class="icon">
+                                    <img src="img/thumbs/user10.png" alt="Arise Admin">
+                                </div>
+                                <div class="details">
+                                    <strong class="text-danger">Rogie King</strong>
+                                    <span>Firefox is a free, open-source web browser from Mozilla.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <img src="img/thumbs/user6.png" alt="Arise Admin">
+                                </div>
+                                <div class="details">
+                                    <strong class="text-success">Dan Cederholm</strong>
+                                    <span>IE is a free web browser from Microsoft.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <img src="img/thumbs/user1.png" alt="Arise Admin">
+                                </div>
+                                <div class="details">
+                                    <strong class="text-info">Justin Mezzell</strong>
+                                    <span>Safari is known for its sleek design and ease of use.</span>
+                                </div>
+                            </li>
+                            <li class="dropdown-footer">See all the notifications</li>
+                        </ul>
+                    </li>
+                    <li class="list-box hidden-xs dropdown">
+                        <a id="drop3" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-archive2"></i>
+                        </a>
+                        <span class="info-label red-bg">3</span>
+                        <ul class="dropdown-menu progress-info">
+                            <li class="dropdown-header">You have 7 pending tasks</li>
+                            <li>
+                                <div class="progress-info">
+                                    <strong class="text-danger">Critical</strong>
+                                    <span>New Dashboard Design</span>
+                                    <span class="pull-right text-danger">20%</span>
+                                </div>
+                                <div class="progress progress-md no-margin">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        <span class="sr-only">20% Complete (success)</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="progress-info">
+                                    <strong class="text-info">Primary</strong>
+                                    <span>UI Changes in V2</span>
+                                    <span class="pull-right">90%</span>
+                                </div>
+                                <div class="progress progress-sm no-margin">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                        <span class="sr-only">90% Complete</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="progress-info">
+                                    <strong class="text-warning">Urgent</strong>
+                                    <span>Bug Fix #123</span>
+                                    <span class="pull-right">60%</span>
+                                </div>
+                                <div class="progress progress-xs no-margin">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        <span class="sr-only">60% Complete (warning)</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="progress-info">
+                                    <span>Bug Fix #111</span>
+                                    <span class="pull-right text-success">Complete</span>
+                                </div>
+                                <div class="progress progress-xs no-margin">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                        <span class="sr-only">100% Complete (warning)</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown-footer">See all the tasks</li>
+                        </ul>
+                    </li>--%>
+                    <li class="list-box user-admin hidden-xs dropdown">
+                        <div class="admin-details">
+                            <div class="name">
+                                <h1 style="text-align: right">
+                                    <asp:Label ID="lblSucursalXYZ" runat="server" Text="Sucursal:"></asp:Label>
+                                </h1>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-box user-admin hidden-xs dropdown">
+                        <div class="admin-details">
+                            <div class="designation">
+                                <h1>
+                                    <asp:Label ID="lblSucursalMaster" runat="server" Text=""></asp:Label>
+                                </h1>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-box user-admin hidden-xs dropdown">
+                        <div class="admin-details">
+                            <div class="name">
+                                <asp:Label ID="lblMPUserName" runat="server" Text="Usuario"></asp:Label>
+                            </div>
+                            <div class="designation">
+                                <asp:Label ID="lblMP" runat="server" Text="Rol"></asp:Label>
+                            </div>
+                        </div>
+                        <a id="drop4" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-user"></i>
+                        </a>
+                        <ul class="dropdown-menu sm">
+                            <li class="dropdown-content">
+                                <%--<a href="usuariosMod.aspx">Editar</a>--%>
+                                <a href="login.aspx">Cerrar Sesión</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" id="toggleMenu" class="toggle-menu">
+                            <i class="collapse-menu-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+                <!-- Header actions ends -->
+
+                <%--<div class="custom-search hidden-sm hidden-xs">
+                    <input type="text" class="search-query" placeholder="Search here ...">
+                    <i class="icon-search3"></i>
+                </div>--%>
+            </header>
+            <!-- Header ends -->
+
+            <!-- Left sidebar start -->
+            <div class="vertical-nav">
+
+                <!-- Collapse menu starts -->
+                <button class="collapse-menu">
+                    <i class="icon-menu2"></i>
+                </button>
+                <!-- Collapse menu ends -->
+
+                <!-- Current user starts -->
+                <div class="user-details clearfix">
+                    <a href="profile.html" class="user-img">
+                        <%--<img src="img/thumbs/user1.png" alt="User Info">--%>
+                        <asp:Image ID="imgMPUserImage" runat="server" alt="Información de usuario" ImageUrl="~/img/thumbs/user1.png" />
+                        <span class="likes-info"><%--9--%></span>
+                    </a>
+                    <h5 class="user-name" runat="server" id="lblMPUserName1">
+                        <%--<asp:Label ID="lblMPUserName1" runat="server" Text="Usuario"></asp:Label>--%>
+                    </h5>
+                </div>
+                <!-- Current user ends -->
+
+                <!-- Sidebar menu starts -->
+                <ul class="menu clearfix">
+                    <asp:Literal ID="lMenu" runat="server"></asp:Literal>
+                </ul>
+                <!-- Sidebar menu ends -->
+            </div>
+            <!-- Left sidebar end -->
+
+            <!-- Dashboard Wrapper Start -->
+            <div class="dashboard-wrapper dashboard-wrapper-lg">
+                <div class="container-fluid">
+                    <form id="form1" runat="server">
+                         <asp:ScriptManager ID="ScriptManagerMaster" runat="server" EnablePageMethods="true" EnableCdn="True" EnableScriptLocalization="False"></asp:ScriptManager>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+                         </form>
+                </div>
+                
+
+            </div>
+            <!-- Dashboard Wrapper End -->
+
+            <!-- Footer Start -->
+            <footer>
+                Copyright Concretos PEPI <span>2021</span>
+            </footer>
+            <!-- Footer end -->
+
+        </div>
+   
+
+
+    <!-- custom JS -->
+    <script src="js/custom.js"></script>
+</body>
+</html>
+

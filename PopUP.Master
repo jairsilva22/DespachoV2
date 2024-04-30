@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PopUP.master.cs" Inherits="despacho.PopUP" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arise Admin Panel" />
+    <meta name="keywords" content="Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Themeforest, Bootstrap, C3 Graphs, D3 Graphs, NVD3 Graphs, Admin Skin, Black Admin Dashboard, Grey Admin Dashboard, Dark Admin Dashboard, Simple Admin Dashboard, Simple Admin Theme, Simple Bootstrap Dashboard, " />
+    <meta name="author" content="Ramji" />
+    <link rel="shortcut icon" href="img/fav.png">
+    <title>Concretos PEPI Admin Panel</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- Main CSS -->
+    <link href="css/main.css" rel="stylesheet" media="screen" />
+
+    <!-- Ion Icons -->
+    <link href="fonts/icomoon/icomoon.css" rel="stylesheet" />
+
+    <!-- Pricing plans CSS -->
+    <link rel="stylesheet" href="css/pricing.css" />
+
+    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+
+    <!-- jquery ScrollUp JS -->
+    <script src="js/scrollup/jquery.scrollUp.js"></script>
+
+    <!-- BS Validator JS -->
+    <script src="js/bsvalidator/bootstrapValidator.js"></script>
+    <script src="js/bsvalidator/custom-validations.js"></script>
+
+    <!-- Sparkline Graphs -->
+    <script src="js/sparkline/sparkline.js"></script>
+    <script src="js/sparkline/custom-sparkline.js"></script>
+
+    <!-- Dragula Drag & Drop JS -->
+    <script src="js/dragula/dragula.min.js"></script>
+
+    <!-- Odometer JS -->
+    <script src="js/odometer/odometer.min.js"></script>
+
+    <!-- DataBars JS -->
+    <script src="js/databars/jquery.databar.js"></script>
+    <script src="js/databars/custom-databars.js"></script>
+
+    <!-- Data Tables -->
+    <script src="js/datatables/dataTables.min.js"></script>
+    <script src="js/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="js/datatables/dataTables.tableTools.js"></script>
+    <script src="js/datatables/autoFill.min.js"></script>
+    <script src="js/datatables/autoFill.bootstrap.min.js"></script>
+    <script src="js/datatables/fixedHeader.min.js"></script>
+    <script src="js/datatables/custom-datatables.js"></script>
+
+    <script src="Scripts/jquery-3.5.1.min.js"></script>
+    <script src="/Scripts/moment.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/bootstrap-datetimepicker.js"></script>
+    <link href="Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+
+        function onlyDotsAndNumbers(event) {
+            var charCode = (event.which) ? event.which : event.keyCode
+            if (charCode == 46) {
+                return true;
+            }
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+
+        function onlyNumbers(event) {
+            var charCode = (event.which) ? event.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+
+    </script>
+    <asp:ContentPlaceHolder runat="server" ID="scripts"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+    <form id="form1" runat="server">
+        <div>
+            <asp:ScriptManager ID="ScriptManager1" runat="server" EnableCdn="True" EnableScriptLocalization="False"></asp:ScriptManager>
+            <!-- Header starts -->
+            <header>
+
+                <!-- Logo starts -->
+                <a href="index.html" class="logo">
+                    <img src="img/pepi_logo.png" alt="Concretos PEPI Admin Dashboard Logo" />
+                </a>
+                <!-- Logo ends -->
+
+            </header>
+            <!-- Header ends -->
+
+
+            <!-- Dashboard Wrapper Start -->
+            <div>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
+            <!-- Dashboard Wrapper End -->
+
+            <!-- Footer Start -->
+            <footer>
+                Copyright Concretos PEPI <span>2021</span>
+            </footer>
+            <!-- Footer end -->
+
+        </div>
+    </form>
+
+</body>
+</html>
+
