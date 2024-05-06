@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using OfficeOpenXml;
+using System.Globalization;
 
 namespace despacho
 {
@@ -124,19 +125,33 @@ namespace despacho
             cPerfil.id = int.Parse(Request.Cookies["ksroc"]["idPerfil"]);
             cPerfil.obtenerPerfilByID();
             string param = hdfParametros.Value + " AND (s.reqFac = 'NO' OR s.reqFac is null)";
-            if(cPerfil.descripcion != "VENDEDOR" && cPerfil.descripcion != "Vendedor")
+
+            if (cPerfil.descripcion != "VENDEDOR" && cPerfil.descripcion != "Vendedor")
             {
-                if(txtFechaI.Text != "" && txtFechaF.Text != "")
+                if (!string.IsNullOrEmpty(txtFechaI.Text) && !string.IsNullOrEmpty(txtFechaF.Text))
                 {
-                    DateTime fechaI = DateTime.Parse(txtFechaI.Text);   
-                    DateTime fechaF = DateTime.Parse(txtFechaF.Text);
-                    param += " AND (o.fecha BETWEEN '" + fechaI.ToString("yyyy-MM-dd") + "' AND '" + fechaF.ToString("yyyy-MM-dd") +"')";
+                    DateTime fechaI, fechaF;
+                    string formatoFecha = "dd/MM/yyyy"; // Esto es un ejemplo, utiliza el formato correcto para tu aplicación
+
+                    if (DateTime.TryParseExact(txtFechaI.Text, formatoFecha, CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaI) &&
+                        DateTime.TryParseExact(txtFechaF.Text, formatoFecha, CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaF))
+                    {
+                        param += " AND (o.fecha BETWEEN '" + fechaI.ToString("yyyy-MM-dd") + "' AND '" + fechaF.ToString("yyyy-MM-dd") + "')";
+                    }
+                    else
+                    {
+                        // Maneja el caso donde las fechas no son válidas según el formato esperado
+                        // Puedes mostrar un mensaje de error al usuario o tomar alguna otra acción apropiada
+                    }
                 }
-                if (txtFoliosPagos.Text != "") {
+
+                if (!string.IsNullOrEmpty(txtFoliosPagos.Text))
+                {
                     cpago = new cPagos();
                     int idSoli = cpago.obtenerIDSolicitud(int.Parse(txtFoliosPagos.Text));
-                    param += " AND (s.id = "+idSoli+") ";
+                    param += " AND (s.id = " + idSoli + ") ";
                 }
+
                 lvSolicitudes.DataSource = cSol.mostrarSolicitudesF(int.Parse(Request.Cookies["ksroc"]["idSucursal"]), param);
                 lvSolicitudes.DataBind();
             }
